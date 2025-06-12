@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosso Amor - Homenagem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #fef9f9, #ffe6e6);
+      color: #333;
+    }
+
+    #preloader {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at center, #ffb3b3, #990000);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    #preloader h1 {
+      font-size: 2.8rem;
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    #preloader button {
+      background-color: white;
+      color: #990000;
+      border: none;
+      padding: 0.8rem 2.2rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #preloader button:hover {
+      background-color: #ffd6d6;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      z-index: 100;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #990000;
+    }
+
+    header {
+      height: 100vh;
+      background: url('images/cover.jpg') center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 2;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+    }
+
+    header p {
+      font-size: 1.4rem;
+      margin-top: 0.5rem;
+    }
+
+    section {
+      padding: 4rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    #gallery h2,
+    #message h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      color: #990000;
+      margin-bottom: 2rem;
+    }
+
+    #gallery .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    #gallery img {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    #gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    #message {
+      background: #fff0f0;
+      border-radius: 1rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+
+    #message p {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      font-size: 0.95rem;
+      color: #888;
+    }
+
+    .heart {
+      color: #d32f2f;
+      animation: beat 1s infinite alternate;
+    }
+
+    @keyframes beat {
+      to { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <div id="preloader">
+    <h1>Um site especial pra minha mulher especial 💌</h1>
+    <br>
+    <h3>Não é um site tão especial não mas vc é</h3>
+    <button onclick="document.getElementById('preloader').style.display='none'">Continuar</button>
+  </div>
+
+  <nav>
+    <a href="#home">Início</a>
+    <a href="#gallery">Fotos</a>
+    <a href="#message">Mensagem</a>
+    <a href="#footer">Sobre</a>
+  </nav>
+
+  <header id="home">
+    <h1>Feliz Dia dos Namorados, Meu Amor <span class="heart">❤️</span></h1>
+    <p>Este site é só uma forma de dizer o quanto você é importante pra mim</p>
+  </header>
+
+  <section id="gallery">
+    <h2>Nossa História em Fotos</h2>
+    <div class="grid">
+      <img src="images/noiz4.png" alt="Nóis">
+      <img src="images/nois2.png" alt="Momento inesquecível">
+      <img src="images/noiz3.png" alt="Beijo romântico">
+    </div>
+  </section>
+
+  <section id="message" class="message">
+    <h2>Minha Mensagem</h2>
+    <p>Amor,</p>
+    <p>Desde que você entrou na minha vida, tudo ganhou mais cor, mais sentido e mais amor.</p>
+    <p>Você é minha paz nos dias difíceis, minha alegria nas vitórias e minha melhor companhia em todos os momentos.</p>
+    <p>Obrigado por ser essa mulher incrível. Eu te amo infinitamente! <span class="heart">❤️</span></p>
+  </section>
+
+
+<section id="playlist" style="padding: 4rem 1rem; text-align: center;">
+  <h2 style="font-family:'Great Vibes', cursive; font-size:2.5rem; color:#1DB954; margin-bottom:2rem;">Nossa Trilha Sonora</h2>
+ <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/36xQe4sZd34gaVpJUW8i42?utm_source=generator"
+ width="100%"
+ height="352"
+ frameBorder="0"
+  allowfullscreen=""
+  allow="autoplay;
+  clipboard-write;
+  encrypted-media;
+  fullscreen;
+  picture-in-picture"
+  loading="lazy">
+</iframe>
+
+  <footer id="footer">
+    <p>Feito com carinho pelo seu amô Thiago David</p>
+    <p>Para a mulher mais especial do mundo.</p>
+  </footer>
+</body>
+</html>
+
